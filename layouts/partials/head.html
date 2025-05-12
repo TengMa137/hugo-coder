@@ -6,6 +6,7 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ end }}
 
+
 {{ partialCached "head/theme-styles.html" . }}
 
 {{ partialCached "head/color-scheme.html" . }}
@@ -19,3 +20,5 @@
 {{ if .IsHome }}{{ partial "head/hugo-generator.html" . }}{{ end }}
 
 {{ partial "head/extensions.html" . }}
+
+{{ partial "head/mathjax.html" . }}

@@ -29,3 +29,8 @@ min_version = "0.124.0"
 [author]
 name = "Luiz F. A. de Prá"
 homepage = "https://luizdepra.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
