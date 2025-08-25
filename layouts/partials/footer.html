@@ -17,3 +17,11 @@
     {{ end }}
   </section>
 </footer>
+
+{{/* Include Chat Widget CSS and HTML */}}
+<link rel="stylesheet" href="/css/chat-widget.css">
+{{ partial "chat-widget.html" . }}
+
+{{/* Include Chat Widget JavaScript */}}
+{{ $chatJS := resources.Get "js/chat.js" | resources.Minify }}
+<script src="{{ $chatJS.RelPermalink }}"></script>

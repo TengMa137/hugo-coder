@@ -1,0 +1,30 @@
+{{/* Chat Widget - Show on all pages if enabled */}}
+{{ if .Site.Params.enableChatWidget | default true }}
+<div id="chat-widget" class="chat-widget">
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+    💬
+  </button>
+  
+  <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+      <span>{{ .Site.Params.chatWidgetTitle | default "Ask me anything!" }}</span>
+      <button id="chat-close" aria-label="Close chat">×</button>
+    </div>
+    
+    <div id="chat-messages" class="chat-messages">
+      <!-- Messages will be added dynamically -->
+    </div>
+    
+    <div class="chat-input">
+      <input 
+        type="text" 
+        id="chat-input" 
+        placeholder="Type your message..."
+        autocomplete="off"
+        maxlength="500"
+      >
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+</div>
+{{ end }}
