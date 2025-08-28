@@ -4,6 +4,9 @@
     <a class="navigation-title" href="{{ absLangURL "" }}">
       {{ .Title }}
     </a>
+    <a id="dark-mode-toggle" class="dark-mode-toggle-inline colorscheme-toggle">
+      <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
     {{ end }}
     {{ if or .Site.Menus.main hugo.IsMultilingual }}
       <input type="checkbox" id="menu-toggle" />
